@@ -304,7 +304,7 @@ Here I use a single additional argument so that you can limit the options to bui
 I use this argument to optionally filter the objects found in the datasets package, then create a `selectInput()`.
 
 ```{r}
-datasetInput <- function(id, filter = NULL) {
+datasetUI <- function(id, filter = NULL) {
   names <- ls("package:datasets")
   if (!is.null(filter)) {
     data <- lapply(names, get, "package:datasets")
